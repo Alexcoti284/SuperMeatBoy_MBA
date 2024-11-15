@@ -3,7 +3,6 @@
 [ext_resource type="Script" path="res://Player.gd" id="2"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3r6ym"]
-load_path = "res://.godot/imported/potatoboy.png-6922fe9e9499f048dcaf1dbee6ad7009.ctex"
 
 [sub_resource type="AtlasTexture" id="9"]
 atlas = SubResource("CompressedTexture2D_3r6ym")
