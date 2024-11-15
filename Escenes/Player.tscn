@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=3 uid="uid://evma16tsv3hg"]
+
+[ext_resource type="Script" path="res://Player.gd" id="2"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3r6ym"]
+load_path = "res://.godot/imported/potatoboy.png-6922fe9e9499f048dcaf1dbee6ad7009.ctex"
+
+[sub_resource type="AtlasTexture" id="9"]
+atlas = SubResource("CompressedTexture2D_3r6ym")
+region = Rect2(0, 315, 87, 105)
+
+[sub_resource type="AtlasTexture" id="10"]
+atlas = SubResource("CompressedTexture2D_3r6ym")
+region = Rect2(87, 315, 87, 105)
+
+[sub_resource type="AtlasTexture" id="11"]
+atlas = SubResource("CompressedTexture2D_3r6ym")
+region = Rect2(174, 315, 87, 105)
+
+[sub_resource type="SpriteFrames" id="8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("9")
+}, {
+"duration": 1.0,
+"texture": SubResource("10")
+}, {
+"duration": 1.0,
+"texture": SubResource("11")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="7"]
+size = Vector2(33, 33)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(226, 167)
+script = ExtResource("2")
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
+scale = Vector2(0.466667, 0.478022)
+sprite_frames = SubResource("8")
+animation = &"walk"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 2.5)
+shape = SubResource("7")

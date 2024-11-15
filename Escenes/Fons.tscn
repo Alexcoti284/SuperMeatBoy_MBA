@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://3deyoanw7vfr"]
+
+[ext_resource type="Texture2D" uid="uid://1laheacdrih4" path="res://Assets/Super Meat Boy/pc/LevelPalettes/forestbg.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://by2tyuih5f3om" path="res://Assets/Super Meat Boy/pc/LevelPalettes/forestp01.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://n8t1jmvxgnm5" path="res://Assets/Super Meat Boy/pc/LevelPalettes/forestset1.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://bk0urfm6rtujy" path="res://Assets/Super Meat Boy/pc/LevelPalettes/foresttiles01.png" id="4"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_avlbx"]
+texture = ExtResource("4")
+
+[sub_resource type="TileSet" id="1"]
+resource_local_to_scene = true
+sources/0 = SubResource("TileSetAtlasSource_avlbx")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Forestbg" type="Sprite2D" parent="."]
+position = Vector2(800, 450)
+scale = Vector2(2.5, 1.875)
+texture = ExtResource("1")
+
+[node name="Forestp01" type="Sprite2D" parent="."]
+position = Vector2(800, 450)
+scale = Vector2(6.25, 7.03125)
+texture = ExtResource("2")
+
+[node name="Forestset1" type="Sprite2D" parent="."]
+position = Vector2(-477, 1915)
+texture = ExtResource("3")
+
+[node name="Foresttiles01" type="Sprite2D" parent="."]
+position = Vector2(-1270, 1919)
+texture = ExtResource("4")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("1")
+format = 2
