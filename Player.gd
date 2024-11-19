@@ -1,12 +1,10 @@
 extends CharacterBody2D
 
-@export var speed = 400
-@export var gravity = 800
-@export var jump_velocity = -350
-var velocity = Vector2()
+@export var speed: float = 200.0
+@export var jump_velocity: float = -500.0
+@export var gravity: float = 1000.0
 
 var screen_size = Vector2()
-
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -17,10 +15,10 @@ func _process(delta):
 	
 	if Input.is_action_pressed("move_right"):
 		velocity.x += speed
-		$AnimatedSprite2D.flip_h = true # Face right
+		$AnimatedSprite2D.flip_h = false # Face right
 	elif Input.is_action_pressed("move_left"):
 		velocity.x -= speed
-		$AnimatedSprite2D.flip_h = false # Face left
+		$AnimatedSprite2D.flip_h = true # Face left
 
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_velocity
@@ -29,10 +27,7 @@ func _process(delta):
 	velocity.y += gravity * delta
 
 	# Apply movement
-	set_velocity(velocity)
-	set_up_direction(Vector2.UP)
 	move_and_slide()
-	velocity = velocity
 
 	# Animation handling
 	if velocity.x != 0:
