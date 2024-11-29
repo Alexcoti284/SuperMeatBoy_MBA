@@ -47,13 +47,20 @@ func _input(event):
 
 func cambiar_nivel(direccion: int) -> void:
 	indice_nivel_actual += direccion
-
+	
 	# Mantener el índice dentro de los límites de la lista
 	if indice_nivel_actual < 0:
 		indice_nivel_actual = niveles.size() - 1
 	elif indice_nivel_actual >= niveles.size():
 		indice_nivel_actual = 0
 
+	match indice_nivel_actual:
+			0:
+				$Label.text = "1-1 Hello World"
+			1:
+				$Label.text = "1-2 Upward"
+			2:
+				$Label.text = "1-3 The Gap"
 	# Cambiar la posición del jugador al nuevo nivel
 	if jugador and niveles[indice_nivel_actual]:
 		jugador.position = niveles[indice_nivel_actual].position

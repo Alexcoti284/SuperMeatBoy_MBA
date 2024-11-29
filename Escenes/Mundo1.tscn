@@ -60,3 +60,19 @@ texture = ExtResource("3_le2gl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador"]
 shape = SubResource("RectangleShape2D_38dlg")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 365.0
+offset_top = 736.0
+offset_right = 1258.0
+offset_bottom = 859.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 43
+text = "1-1 Hello World"
