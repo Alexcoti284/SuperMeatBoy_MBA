@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://dau7mj7iivawd"]
+
+[ext_resource type="Script" path="res://Escenes/mundo_1.gd" id="1_o066x"]
+[ext_resource type="Texture2D" uid="uid://dao46kj64a21v" path="res://Assets/Super Meat Boy/pc/LevelPalettes/mundo1.png" id="1_s1hwl"]
+[ext_resource type="Texture2D" uid="uid://jkcbbgbgb5s" path="res://icon.png" id="3_le2gl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6fb3x"]
+size = Vector2(130, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_61a6c"]
+size = Vector2(128, 45)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uy44t"]
+size = Vector2(132, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_38dlg"]
+
+[node name="Mundo1" type="Node2D"]
+script = ExtResource("1_o066x")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1602.0
+offset_bottom = 903.0
+texture = ExtResource("1_s1hwl")
+
+[node name="Nivel1" type="Node2D" parent="."]
+position = Vector2(423, 599)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Nivel1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel1/StaticBody2D"]
+position = Vector2(8, 6)
+shape = SubResource("RectangleShape2D_6fb3x")
+
+[node name="Nivel2" type="Node2D" parent="."]
+position = Vector2(806, 594)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Nivel2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel2/StaticBody2D"]
+position = Vector2(-2, 9.5)
+shape = SubResource("RectangleShape2D_61a6c")
+
+[node name="Nivel3" type="Node2D" parent="."]
+position = Vector2(1215, 602)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Nivel3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Nivel3/StaticBody2D"]
+position = Vector2(-5, 3)
+shape = SubResource("RectangleShape2D_uy44t")
+
+[node name="Jugador" type="CharacterBody2D" parent="."]
+z_index = 10
+position = Vector2(431, 563)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Jugador"]
+texture = ExtResource("3_le2gl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador"]
+shape = SubResource("RectangleShape2D_38dlg")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 365.0
+offset_top = 736.0
+offset_right = 1258.0
+offset_bottom = 859.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 43
+text = "1-1 Hello World"
