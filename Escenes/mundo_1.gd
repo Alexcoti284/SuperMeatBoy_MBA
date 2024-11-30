@@ -65,3 +65,5 @@ func cambiar_nivel(direccion: int) -> void:
 	if jugador and niveles[indice_nivel_actual]:
 		jugador.position = niveles[indice_nivel_actual].position
 		print("Jugador movido a: ", jugador.position)
+		
+		

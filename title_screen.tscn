@@ -6842,6 +6842,7 @@ tile_map_data = PackedByteArray("AAAVAB0AAAAfAAEAAGAVABwAAAAgAAEAAGAVABsAAAAhAAE
 tile_set = SubResource("TileSet_jfok0")
 
 [node name="StartButton" type="Button" parent="."]
+layout_mode = 0
 offset_left = 552.0
 offset_top = 672.0
 offset_right = 1006.0
