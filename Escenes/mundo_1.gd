@@ -39,9 +39,9 @@ func _input(event):
 	if event.is_action_pressed("ui_accept"):
 		match indice_nivel_actual:
 			0:
-				get_tree().change_scene_to_file("res://Escenes/Fons.tscn")
+				get_tree().change_scene_to_file("res://Escenes/Lvl1.tscn")
 			1:
-				get_tree().change_scene_to_file("res://Escenes/Fons.tscn")
+				get_tree().change_scene_to_file("res://Escenes/Lvl2.tscn")
 			2:
 				get_tree().change_scene_to_file("res://Escenes/Fons.tscn")
 
