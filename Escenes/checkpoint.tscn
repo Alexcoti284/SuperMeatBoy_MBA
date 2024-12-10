@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bqrrgtiujq2oa"]
 
 [ext_resource type="Texture2D" uid="uid://bx7k7dxngdrfi" path="res://Assets/Super Meat Boy/pc/Animations/bandagegirl.png" id="1_1m82i"]
-[ext_resource type="Script" path="res://Escenes/checkpoint.gd" id="1_uxaks"]
+[ext_resource type="Script" path="res://Scripts/checkpoint.gd" id="1_uxaks"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hicq0"]
 atlas = ExtResource("1_1m82i")

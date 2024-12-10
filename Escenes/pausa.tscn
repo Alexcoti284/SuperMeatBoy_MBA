@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://oikjkafwpdec"]
 
-[ext_resource type="Script" path="res://Escenes/pausa.gd" id="1_fw1kw"]
+[ext_resource type="Script" path="res://Scripts/pausa.gd" id="1_fw1kw"]
 [ext_resource type="FontFile" uid="uid://40ddt3grx5jt" path="res://Assets/Super Meat Boy/resources/Fonts/meat-boy-font.ttf" id="1_qrvgf"]
 [ext_resource type="Texture2D" uid="uid://bht5plrk3f6oy" path="res://Assets/Super Meat Boy/pc/Menus/jefePausa.png" id="2_oxaf1"]
 

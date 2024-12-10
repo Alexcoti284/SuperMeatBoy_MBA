@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://dpml44cxien1d"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1_7wnh0"]
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_7wnh0"]
 [ext_resource type="Texture2D" uid="uid://3own4hlob7j1" path="res://Assets/Super Meat Boy/pc/Animations/potatoboy.png" id="2_ohl7x"]
 [ext_resource type="Texture2D" uid="uid://3yr0kmc2fjp" path="res://Assets/Super Meat Boy/pc/Animations/potatoBoyWall.png" id="3_dngsm"]
 

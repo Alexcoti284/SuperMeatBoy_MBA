@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://biht548pwsl60"]
 
-[ext_resource type="VideoStream" path="res://videoCutscenes/1115.ogv" id="1_g8bj3"]
+[ext_resource type="VideoStream" path="res://Assets/Super Meat Boy/pc/videoCutscenes/1115.ogv" id="1_g8bj3"]
 
 [node name="intro" type="Node2D"]
 metadata/_edit_group_ = true
