@@ -2752,7 +2752,7 @@ tile_set = SubResource("TileSet_oqej2")
 rendering_quadrant_size = 60
 
 [node name="Player2" parent="." instance=ExtResource("5_biaee")]
-position = Vector2(315, 731)
+position = Vector2(315, 740)
 
 [node name="Checkpoint" parent="." instance=ExtResource("6_exdiy")]
 position = Vector2(792, 394)

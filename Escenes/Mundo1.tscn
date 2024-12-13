@@ -97,7 +97,7 @@ shape = SubResource("RectangleShape2D_38dlg")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Jugador"]
 sprite_frames = SubResource("SpriteFrames_vl3oa")
 autoplay = "default"
-frame_progress = 0.908915
+frame_progress = 0.523301
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 3
