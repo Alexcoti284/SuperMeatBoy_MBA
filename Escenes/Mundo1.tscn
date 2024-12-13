@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dau7mj7iivawd"]
+[gd_scene load_steps=13 format=3 uid="uid://dau7mj7iivawd"]
 
 [ext_resource type="Script" path="res://Scripts/mundo_1.gd" id="1_o066x"]
 [ext_resource type="Texture2D" uid="uid://dao46kj64a21v" path="res://Assets/Super Meat Boy/pc/LevelPalettes/mundo1.png" id="1_s1hwl"]
-[ext_resource type="Texture2D" uid="uid://jkcbbgbgb5s" path="res://icon.png" id="3_le2gl"]
+[ext_resource type="Texture2D" uid="uid://dls1svxqf2pul" path="res://Assets/Super Meat Boy/pc/Animations/4bitmeatboyfinal.png" id="3_8uaqs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6fb3x"]
 size = Vector2(130, 44)
@@ -14,6 +14,42 @@ size = Vector2(128, 45)
 size = Vector2(132, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_38dlg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vn4uc"]
+atlas = ExtResource("3_8uaqs")
+region = Rect2(98, 88, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amaan"]
+atlas = ExtResource("3_8uaqs")
+region = Rect2(49, 88, 49, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aegec"]
+atlas = ExtResource("3_8uaqs")
+region = Rect2(198, 190, 50, 42)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fbi48"]
+atlas = ExtResource("3_8uaqs")
+region = Rect2(198, 148, 50, 42)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vl3oa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vn4uc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amaan")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aegec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fbi48")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
 
 [node name="Mundo1" type="Node2D"]
 script = ExtResource("1_o066x")
@@ -55,11 +91,13 @@ z_index = 10
 position = Vector2(431, 563)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Jugador"]
-texture = ExtResource("3_le2gl")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Jugador"]
 shape = SubResource("RectangleShape2D_38dlg")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Jugador"]
+sprite_frames = SubResource("SpriteFrames_vl3oa")
+autoplay = "default"
+frame_progress = 0.318738
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 3
