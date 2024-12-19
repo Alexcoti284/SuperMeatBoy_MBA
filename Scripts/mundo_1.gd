@@ -45,7 +45,7 @@ func _input(event):
 			1:
 				get_tree().change_scene_to_file("res://Escenes/Lvl2.tscn")
 			2:
-				get_tree().change_scene_to_file("res://Escenes/Fons.tscn")
+				get_tree().change_scene_to_file("res://Escenes/Lvl3.tscn")
 
 func cambiar_nivel(direccion: int) -> void:
 	indice_nivel_actual += direccion
@@ -62,7 +62,7 @@ func cambiar_nivel(direccion: int) -> void:
 			1:
 				$Label.text = "1-2 Upward"
 			2:
-				$Label.text = "1-3 The Gap"
+				$Label.text = "1-3 Mensaje Para Josep"
 	# Cambiar la posición del jugador al nuevo nivel
 	if jugador and niveles[indice_nivel_actual]:
 		jugador.position = niveles[indice_nivel_actual].position

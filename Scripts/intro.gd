@@ -4,10 +4,10 @@ extends Node2D
 
 
 func _input(event):
-	if Input.is_action_pressed("ui_accept"):
-		get_tree().change_scene_to_file("res://title_screen.tscn")
+	if event.is_action_pressed("titleSpace"):
+		get_tree().change_scene_to_file("res://Escenes/title_screen.tscn")
 	
 
 
 func _on_video_stream_player_finished() -> void:
-	get_tree().change_scene_to_file("res://title_screen.tscn")
+	get_tree().change_scene_to_file("res://Escenes/title_screen.tscn")

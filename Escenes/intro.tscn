@@ -1,8 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://biht548pwsl60"]
+[gd_scene load_steps=3 format=3 uid="uid://biht548pwsl60"]
 
 [ext_resource type="VideoStream" path="res://Assets/Super Meat Boy/pc/videoCutscenes/1115.ogv" id="1_g8bj3"]
+[ext_resource type="Script" path="res://Scripts/intro.gd" id="1_xgfvv"]
 
 [node name="intro" type="Node2D"]
+script = ExtResource("1_xgfvv")
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -10,8 +12,8 @@ position = Vector2(803, 447)
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
 offset_top = -23.0
-offset_right = 1604.0
-offset_bottom = 926.0
+offset_right = 1619.0
+offset_bottom = 911.0
 stream = ExtResource("1_g8bj3")
 autoplay = true
 expand = true

@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc1o4eiq0q0a6"]
+
+[ext_resource type="Texture2D" uid="uid://cn2lnlc3jq36m" path="res://Assets/Super Meat Boy/pc/Menus/meatboy.png" id="1_0ekup"]
+[ext_resource type="Script" path="res://Scripts/lvl_3.gd" id="1_s6loq"]
+[ext_resource type="FontFile" uid="uid://40ddt3grx5jt" path="res://Assets/Super Meat Boy/resources/Fonts/meat-boy-font.ttf" id="2_fxbn2"]
+
+[node name="Lvl3" type="Node2D"]
+script = ExtResource("1_s6loq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -24.0
+offset_top = -15.0
+offset_right = 1643.0
+offset_bottom = 936.0
+color = Color(0, 0, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(344, 477)
+scale = Vector2(0.0569005, 0.0680779)
+texture = ExtResource("1_0ekup")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 668.0
+offset_top = 239.0
+offset_right = 1540.0
+offset_bottom = 372.0
+theme_override_fonts/font = ExtResource("2_fxbn2")
+theme_override_font_sizes/font_size = 75
+text = "Graciès per jugar"
+
+[node name="SalirJuego" type="Button" parent="."]
+offset_left = 882.0
+offset_top = 520.0
+offset_right = 1303.0
+offset_bottom = 617.0
+theme_override_fonts/font = ExtResource("2_fxbn2")
+theme_override_font_sizes/font_size = 40
+text = "Salir del Juego
+"
+
+[node name="VolverMapa" type="Button" parent="."]
+offset_left = 884.0
+offset_top = 374.0
+offset_right = 1305.0
+offset_bottom = 471.0
+theme_override_fonts/font = ExtResource("2_fxbn2")
+theme_override_font_sizes/font_size = 40
+text = "Volver al Mapa"
+
+[connection signal="pressed" from="SalirJuego" to="." method="_on_salir_juego_pressed"]
+[connection signal="pressed" from="VolverMapa" to="." method="_on_volver_mapa_pressed"]
