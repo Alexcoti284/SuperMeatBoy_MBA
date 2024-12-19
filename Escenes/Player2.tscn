@@ -73,7 +73,7 @@ animations = [{
 custom_solver_bias = 1.0
 radius = 21.0238
 
-[node name="Player2" type="CharacterBody2D"]
+[node name="Player2" type="CharacterBody2D" groups=["Player"]]
 position = Vector2(642, 83)
 script = ExtResource("1_7wnh0")
 

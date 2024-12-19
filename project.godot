@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Super Meat Boy"
-run/main_scene="res://Escenes/Lvl1.tscn"
+run/main_scene="res://Escenes/intro.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.png"
 
@@ -19,6 +19,10 @@ config/icon="res://icon.png"
 
 window/size/viewport_width=1600
 window/size/viewport_height=900
+
+[global_group]
+
+Player=""
 
 [gui]
 

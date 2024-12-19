@@ -31,6 +31,8 @@ func _ready() -> void:
 		print("No hay niveles en la lista. Verifica las referencias.")
 
 func _input(event):
+	if event.is_action_pressed("esc"):
+		get_tree().change_scene_to_file("res://Escenes/title_screen.tscn")
 	if event.is_action_pressed("ui_right"):
 		cambiar_nivel(1)
 	elif event.is_action_pressed("ui_left"):

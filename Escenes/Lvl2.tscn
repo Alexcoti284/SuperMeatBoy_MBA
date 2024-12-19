@@ -1,5 +1,6 @@
-[gd_scene load_steps=22 format=4 uid="uid://dcu0rpomt2evy"]
+[gd_scene load_steps=24 format=4 uid="uid://dcu0rpomt2evy"]
 
+[ext_resource type="Script" path="res://Scripts/lvl_1.gd" id="1_xmlf1"]
 [ext_resource type="Texture2D" uid="uid://1laheacdrih4" path="res://Assets/Super Meat Boy/pc/LevelPalettes/forestbg.png" id="1_ynxib"]
 [ext_resource type="Texture2D" uid="uid://by2tyuih5f3om" path="res://Assets/Super Meat Boy/pc/LevelPalettes/forestp01.png" id="2_mwod8"]
 [ext_resource type="Texture2D" uid="uid://bk0urfm6rtujy" path="res://Assets/Super Meat Boy/pc/LevelPalettes/foresttiles01.png" id="3_5cjx8"]
@@ -7,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dgqfyrmcnlhcd" path="res://Assets/Super Meat Boy/pc/LevelPalettes/hobstacles.png" id="5_ejge7"]
 [ext_resource type="PackedScene" uid="uid://dpml44cxien1d" path="res://Escenes/Player2.tscn" id="6_oagra"]
 [ext_resource type="PackedScene" uid="uid://bqrrgtiujq2oa" path="res://Escenes/checkpoint.tscn" id="7_drwrs"]
+[ext_resource type="PackedScene" uid="uid://oikjkafwpdec" path="res://Escenes/pausa.tscn" id="9_xslit"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5yr7b"]
 
@@ -7611,7 +7613,8 @@ texture = ExtResource("5_ejge7")
 sources/5 = SubResource("TileSetAtlasSource_dlbbq")
 sources/7 = SubResource("TileSetAtlasSource_6q5di")
 
-[node name="Node2D" type="Node2D"]
+[node name="Lvl2" type="Node2D"]
+script = ExtResource("1_xmlf1")
 
 [node name="Forestbg" type="Sprite2D" parent="."]
 position = Vector2(800, 332)
@@ -7747,3 +7750,17 @@ position = Vector2(238, 644)
 
 [node name="Checkpoint" parent="." instance=ExtResource("7_drwrs")]
 position = Vector2(786, 236)
+
+[node name="time" type="Label" parent="."]
+offset_left = 44.0
+offset_top = 194.0
+offset_right = 122.0
+offset_bottom = 241.0
+
+[node name="updTime" type="Timer" parent="time"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pausa" parent="CanvasLayer" instance=ExtResource("9_xslit")]
+process_mode = 2
+visible = false

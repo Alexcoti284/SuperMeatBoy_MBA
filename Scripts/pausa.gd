@@ -1,6 +1,8 @@
 extends Control
 
 
+@onready var main = $"../../"
+
 func resume():
 	get_tree().paused = false
 	
@@ -17,10 +19,11 @@ func testEsc():
 
 
 func _on_resumir_juego_pressed() -> void:
-	resume()
+	main.pauseMenu()
 
 
 func _on_volver_al_mapa_pressed() -> void:
+	get_tree().paused = false;
 	get_tree().change_scene_to_file("res://Escenes/Mundo1.tscn")
 
 
